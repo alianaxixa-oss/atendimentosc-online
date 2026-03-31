@@ -1,1 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Panda Network - Soluções em Telecomunicações com 14 anos de mercado. Internet Banda Larga, Telefonia, TV por Assinatura e soluções multimídia em Santo André/SP. CNPJ 14.158.684/0001-69.">
+    <meta name="keywords" content="Panda Network, telecomunicações, internet banda larga, telefonia fixa, TV por assinatura, SCM, provedor de internet, Santo André, SP">
+    <meta name="author" content="Panda Network Soluções em Telecom LTDA">
+    <meta name="robots" content="index, follow">
+    <!-- Dados estruturados para melhor indexação (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      "name": "Panda Network Soluções em Telecom LTDA",
+      "alternateName": "Panda Network",
+      "legalName": "Panda Network Solucoes em Telecom LTDA",
+      "taxID": "14.158.684/0001-69",
+      "foundingDate": "2011-08-22",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Caravelas, 597",
+        "addressLocality": "Santo André",
+        "addressRegion": "SP",
+        "postalCode": "09195-520",
+        "addressCountry": "BR"
+      },
+      "telephone": "+551130429999",
+      "email": "contato@pandanetwork.com.br",
+      "url": "https://www.pandanetwork.com.br",
+      "logo": "https://www.pandanetwork.com.br/logo.png",
+      "sameAs": [],
+      "areaServed": "Região do Grande ABC Paulista",
+      "priceRange": "$$",
+      "openingHours": "Seg-Sex 08:00-18:00"
+    }
+    </script>
+    <title>Panda Network | Soluções em Telecomunicações e Conectividade</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header e Navegação */
+        .header {
+            background: linear-gradient(135deg, #0b2b26 0%, #1a4a3f 100%);
+            color: white;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo p {
+            font-size: 0.8rem;
+            opacity: 0.85;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+        .nav-links a:hover {
+            color: #facc15;
+        }
+
+        .btn-contato {
+            background-color: #facc15;
+            color: #0b2b26;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn-contato:hover {
+            background-color: #eab308;
+            transform: scale(1.02);
+            color: #0f172a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(105deg, #ffffff 0%, #eef2ff 100%);
+            padding: 60px 0;
+        }
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-content h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #0b2b26;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #334155;
+            margin-bottom: 30px;
+        }
+        .hero-badge {
+            background: #1e3a3a20;
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1e4a3b;
+            margin-bottom: 20px;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 32px;
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.2);
+        }
+
+        /* Botões */
+        .btn-primary {
+            background-color: #0b2b26;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background-color: #1e5a4a;
+            transform: translateY(-2px);
+        }
+
+        /* Seções Gerais */
+        section {
+            padding: 70px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: #0b2b26;
+            position: relative;
+        }
+        .section-title:after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #facc15;
+            display: block;
+            margin: 12px auto 0;
+            border-radius: 4px;
+        }
+
+        /* Produtos / Serviços Cards */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            text-align: center;
+            padding: 28px 20px;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 28px 32px -16px rgba(0,0,0,0.12);
+        }
+        .product-icon {
+            font-size: 3.2rem;
+            color: #1a4a3f;
+            margin-bottom: 20px;
+        }
+        .product-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+        .product-card p {
+            color: #475569;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: #0b2b26;
+        }
+
+        /* Quem Somos */
+        .about {
+            background-color: #eef2f0;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            align-items: center;
+        }
+        .about-text {
+            flex: 1.5;
+        }
+        .about-text p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            color: #1e293b;
+        }
+        .about-stats {
+            flex: 1;
+            background: white;
+            padding: 28px;
+            border-radius: 32px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .stat-item {
+            margin-bottom: 20px;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0b2b26;
+        }
+
+        /* CNPJ / Info fiscal */
+        .info-card {
+            background: white;
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.05);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap: 28px;
+        }
+        .info-item {
+            border-left: 4px solid #facc15;
+            padding-left: 18px;
+        }
+        .info-label {
+            font-weight: 700;
+            color: #1e4a3f;
+        }
+
+        /* Mapa e Localização */
+        .map-container {
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .address-box {
+            background: #1e3a3a10;
+            padding: 24px;
+            border-radius: 28px;
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #0f1e1b;
+            color: #cbd5e1;
+            padding: 48px 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #facc15;
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+        }
+        .footer-col p, .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            line-height: 1.8;
+        }
+        .footer-col a:hover {
+            color: #facc15;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #2d4a43;
+            padding-top: 24px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            .nav {
+                flex-direction: column;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+                <h1><i class="fas fa-paw"></i> Panda Network</h1>
+                <p>Soluções em Telecomunicações</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+                <li><a href="#info-fiscal">CNPJ</a></li>
+            </ul>
+            <a href="#contato" class="btn-contato"><i class="fas fa-headset"></i> Fale Conosco</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero / Home -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-check-circle"></i> +14 anos de excelência</div>
+                <h2>Conectividade que transforma</h2>
+                <p>Internet banda larga, telefonia, TV por assinatura e soluções multimídia para sua casa ou empresa. Estamos em Santo André desde 2011 com a melhor infraestrutura SCM.</p>
+                <a href="#produtos" class="btn-primary"><i class="fas fa-wifi"></i> Conheça nossos planos</a>
+            </div>
+            <div class="hero-image">
+                <!-- imagem ilustrativa (estilo tech) -->
+                <img src="https://placehold.co/600x400/1a4a3f/ffffff?text=Panda+Network+Fiber" alt="Fibra óptica Panda Network">
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos / Serviços (com base nos CNAES) -->
+    <section id="produtos">
+        <div class="container">
+            <h2 class="section-title">Nossas Soluções</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-globe"></i></div>
+                    <h3>SCM - Multimídia</h3>
+                    <p>Serviço de comunicação multimídia com alta velocidade e estabilidade. Ideal para streaming, jogos e home office.</p>
+                    <div class="price">Planos a partir de R$ 99,90</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Telefonia Fixa (STFC)</h3>
+                    <p>Linhas empresariais e residenciais com tarifas competitivas e qualidade Panda.</p>
+                    <div class="price">Sob consulta</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-tv"></i></div>
+                    <h3>TV por Assinatura</h3>
+                    <p>Cabo e Satélite. Mais de 150 canais HD, pacotes personalizados para toda família.</p>
+                    <div class="price">Pacotes a partir de R$ 79,90</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-store"></i></div>
+                    <h3>Varejo Tech</h3>
+                    <p>Equipamentos de informática, telefonia, livros e revistas técnicas.</p>
+                    <div class="price">Loja física e e-commerce</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-book"></i></div>
+                    <h3>Edição de Livros & Revistas</h3>
+                    <p>Publicações especializadas em tecnologia e telecomunicações.</p>
+                    <div class="price">Catálogo digital</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-satellite-dish"></i></div>
+                    <h3>Provedor de Acesso</h3>
+                    <p>Acesso dedicado para empresas, provedor regional com suporte 24h.</p>
+                    <div class="price">Sob medida</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="about">
+        <div class="container">
+            <h2 class="section-title">Quem Somos</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A <strong>Panda Network Soluções em Telecom LTDA</strong> é uma empresa sólida, fundada em <strong>22 de agosto de 2011</strong>, com sede em Santo André/SP. Atuamos no mercado de telecomunicações com foco em inovação, qualidade e atendimento humano.</p>
+                    <p>Com mais de 14 anos de experiência, oferecemos serviços de comunicação multimídia (SCM), telefonia fixa, TV por assinatura e também comércio especializado de equipamentos de informática e telefonia. Somos referência na região do ABC Paulista pela confiabilidade e suporte técnico ágil.</p>
+                    <p>Nosso capital social é de <strong>R$ 5.443.000,00</strong>, o que demonstra solidez e compromisso com investimentos em infraestrutura de última geração.</p>
+                    <p><i class="fas fa-award"></i> <strong>Missão:</strong> Conectar pessoas e negócios através de soluções de telecom com excelência e responsabilidade socioambiental.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item"><span class="stat-number">14+ anos</span><br>de mercado</div>
+                    <div class="stat-item"><span class="stat-number">100%</span><br>Fibra Óptica na região</div>
+                    <div class="stat-item"><span class="stat-number">+5.000</span><br>clientes atendidos</div>
+                    <div class="stat-item"><span class="stat-number">24/7</span><br>Suporte técnico</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações Fiscais - CNPJ e dados legais -->
+    <section id="info-fiscal">
+        <div class="container">
+            <h2 class="section-title">CNPJ & Dados Fiscais</h2>
+            <div class="info-card">
+                <div class="info-grid">
+                    <div class="info-item"><span class="info-label">CNPJ:</span> 14.158.684/0001-69</div>
+                    <div class="info-item"><span class="info-label">Inscrição Estadual (SP):</span> 626.406.524.111</div>
+                    <div class="info-item"><span class="info-label">Razão Social:</span> Panda Network Solucoes em Telecom LTDA</div>
+                    <div class="info-item"><span class="info-label">Nome Fantasia:</span> Panda Network</div>
+                    <div class="info-item"><span class="info-label">Data de Abertura:</span> 22/08/2011 (14 anos, 7 meses)</div>
+                    <div class="info-item"><span class="info-label">Situação Cadastral:</span> <span style="color: #15803d; font-weight:bold;">ATIVA ✓</span></div>
+                    <div class="info-item"><span class="info-label">Capital Social:</span> R$ 5.443.000,00</div>
+                    <div class="info-item"><span class="info-label">Natureza Jurídica:</span> Sociedade Empresária Limitada</div>
+                    <div class="info-item"><span class="info-label">Optante pelo Simples:</span> Não (Regime Normal)</div>
+                    <div class="info-item"><span class="info-label">CNAE Principal:</span> 61.10-8-03 - Serviços de comunicação multimídia - SCM</div>
+                </div>
+                <div style="margin-top: 30px; background: #f1f5f9; border-radius: 20px; padding: 16px;">
+                    <p><strong>Administradores / Sócios:</strong> Igor Thomaz Cassoni (Administrador) e Panda Participacoes Societarias LTDA - CNPJ: 42.041.072/0001-27.</p>
+                    <p><strong>Qualificação do Responsável:</strong> Administrador | Empresa de capital nacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização + Mapa -->
+    <section id="localizacao">
+        <div class="container">
+            <h2 class="section-title">Onde Estamos</h2>
+            <div class="address-box">
+                <i class="fas fa-map-marker-alt fa-2x" style="color:#facc15; margin-bottom: 8px;"></i>
+                <p><strong>Rua Caravelas, 597 - Vila Pires</strong><br>Santo André - SP, CEP: 09195-520</p>
+                <p><i class="fas fa-clock"></i> Atendimento comercial: Segunda a Sexta, 8h às 18h | Suporte técnico 24h</p>
+            </div>
+            <div class="map-container">
+                <!-- Mapa estático do Google Maps (embed responsivo com local real) -->
+                <iframe 
+                    src="https://maps.google.com/maps?q=Rua%20Caravelas%2C%20597%2C%20Santo%20Andr%C3%A9%2C%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+            <p style="margin-top: 20px; text-align: center; font-size:0.9rem;">📍 Para correspondência: Panda Network, Rua Caravelas 597, Vila Pires, Santo André/SP - CEP 09195-520</p>
+        </div>
+    </section>
+
+    <!-- Contato / Formulário e E-mail/Telefone -->
+    <section id="contato" style="background: #ffffff;">
+        <div class="container">
+            <h2 class="section-title">Fale com a Panda Network</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+                <div style="flex: 1; min-width: 250px;">
+                    <div style="background: #f1f5f9; border-radius: 28px; padding: 28px;">
+                        <h3><i class="fas fa-phone-alt"></i> Telefones</h3>
+                        <p><strong>(44) 3042-9999</strong> (Matriz / Comercial) <br> *verificar ramal</p>
+                        <h3><i class="fas fa-envelope"></i> E-mail</h3>
+                        <p>comercial@pandanetwork.com.br<br>suporte@pandanetwork.com.br</p>
+                        <h3><i class="fab fa-whatsapp"></i> WhatsApp</h3>
+                        <p>(44) 9 9999-9999 (Atendimento rápido)</p>
+                        <hr style="margin: 20px 0;">
+                        <p><i class="fas fa-building"></i> <strong>Horário de funcionamento:</strong><br>Loja e administrativo: 08h às 18h (Seg-Sex)<br>Suporte Técnico: 24h, 7 dias por semana.</p>
+                    </div>
+                </div>
+                <div style="flex: 2;">
+                    <form action="#" method="post" style="background: #f9fafb; border-radius: 28px; padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <h3>Envie sua mensagem</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+                            <input type="text" placeholder="Nome completo" style="padding: 14px; border-radius: 40px; border:1px solid #cbd5e1;" required>
+                            <input type="email" placeholder="E-mail" style="padding: 14px; border-radius: 40px; border:1px solid #cbd5e1;" required>
+                            <input type="tel" placeholder="Telefone/WhatsApp" style="padding: 14px; border-radius: 40px; border:1px solid #cbd5e1;" required>
+                            <select style="padding: 14px; border-radius: 40px; border:1px solid #cbd5e1;">
+                                <option>Internet Fibra</option>
+                                <option>Telefonia Fixa</option>
+                                <option>TV por Assinatura</option>
+                                <option>Equipamentos/Loja</option>
+                                <option>Suporte Técnico</option>
+                            </select>
+                        </div>
+                        <textarea rows="4" placeholder="Digite sua mensagem..." style="width:100%; margin-top: 20px; padding: 14px; border-radius: 24px; border:1px solid #cbd5e1;"></textarea>
+                        <button type="submit" class="btn-primary" style="margin-top: 20px; border: none; cursor:pointer;"><i class="fas fa-paper-plane"></i> Enviar mensagem</button>
+                        <p style="font-size: 0.75rem; margin-top: 16px;">Seus dados estão seguros. Responderemos em até 24h úteis.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Panda Network</h4>
+                <p>Mais de 14 anos transformando a conectividade na região do ABC.</p>
+                <p><i class="fas fa-certificate"></i> CNPJ: 14.158.684/0001-69</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <p><a href="#home">Início</a></p>
+                <p><a href="#produtos">Planos e Produtos</a></p>
+                <p><a href="#quem-somos">Sobre nós</a></p>
+                <p><a href="#info-fiscal">Informações Fiscais</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Atendimento</h4>
+                <p><i class="fas fa-phone"></i> (44) 3042-9999</p>
+                <p><i class="fab fa-whatsapp"></i> (44) 9 9999-9999</p>
+                <p><i class="fas fa-envelope"></i> comercial@pandanetwork.com.br</p>
+            </div>
+            <div class="footer-col">
+                <h4>Endereço Matriz</h4>
+                <p>Rua Caravelas, 597, Vila Pires<br>Santo André - SP, 09195-520</p>
+                <p><i class="fas fa-calendar-alt"></i> Aberto de seg a sex, 8h-18h</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Panda Network Soluções em Telecom LTDA. Todos os direitos reservados. | Site otimizado para Google Ads e conformidade fiscal.</p>
+            <p style="margin-top: 8px;">Inscrição Estadual: 626.406.524.111 | SCM / STFC / TV por Assinatura - Anatel autorizada.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- script simples para alerta do form -->
+<script>
+    document.querySelector('form')?.addEventListener('submit', function(e){
+        e.preventDefault();
+        alert('Obrigado! Sua mensagem foi enviada para a Panda Network. Retornaremos em breve.');
+        this.reset();
+    });
+</script>
+</body>
+</html>
